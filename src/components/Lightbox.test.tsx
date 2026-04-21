@@ -54,4 +54,16 @@ describe('Lightbox', () => {
     render(<Lightbox {...defaultProps} currentIndex={2} />)
     expect(screen.queryByLabelText('次の画像')).not.toBeInTheDocument()
   })
+
+  it('最初の画像で ArrowLeft キーを押しても onPrev を呼ばない', async () => {
+    render(<Lightbox {...defaultProps} currentIndex={0} />)
+    await userEvent.keyboard('{ArrowLeft}')
+    expect(defaultProps.onPrev).not.toHaveBeenCalled()
+  })
+
+  it('最後の画像で ArrowRight キーを押しても onNext を呼ばない', async () => {
+    render(<Lightbox {...defaultProps} currentIndex={2} />)
+    await userEvent.keyboard('{ArrowRight}')
+    expect(defaultProps.onNext).not.toHaveBeenCalled()
+  })
 })

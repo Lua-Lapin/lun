@@ -12,7 +12,7 @@ export const SnsLinks = () => (
         rel="noopener noreferrer"
         className={styles.link}
       >
-        <DynamicIcon name={link.icon as string} size={16} />
+        <DynamicIcon name={link.icon} size={16} />
         <span>{link.label}</span>
       </a>
     ))}

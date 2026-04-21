@@ -13,8 +13,8 @@ export const Lightbox = ({ images, currentIndex, onClose, onPrev, onNext }: Prop
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose()
-      if (e.key === 'ArrowLeft') onPrev()
-      if (e.key === 'ArrowRight') onNext()
+      if (e.key === 'ArrowLeft' && currentIndex > 0) onPrev()
+      if (e.key === 'ArrowRight' && currentIndex < images.length - 1) onNext()
     }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
