@@ -4,15 +4,18 @@ export interface Profile {
   avatar: string
 }
 
+export type LucideIconName = keyof typeof import('lucide-react')
+
 export interface SnsLink {
   label: string
   url: string
-  icon: string
+  icon: LucideIconName
 }
 
 export interface Event {
   id: string
   title: string
+  /** YYYY.MM format, e.g. "2024.08" */
   date: string
   description: string
   images: string[]
