@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { imagePath } from '../utils/imagePath'
 import { Lightbox } from './Lightbox'
 
 const images = ['/img/01.jpg', '/img/02.jpg', '/img/03.jpg']
@@ -18,7 +19,7 @@ describe('Lightbox', () => {
 
   it('現在の画像を表示する', () => {
     render(<Lightbox {...defaultProps} />)
-    expect(screen.getByRole('img')).toHaveAttribute('src', '/img/02.jpg')
+    expect(screen.getByRole('img')).toHaveAttribute('src', imagePath('/img/02.jpg'))
   })
 
   it('オーバーレイクリックで onClose を呼ぶ', async () => {

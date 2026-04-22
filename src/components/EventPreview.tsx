@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Event } from '../config'
+import { imagePath } from '../utils/imagePath'
 import styles from './EventPreview.module.css'
 
 interface Props {
@@ -16,7 +17,7 @@ export const EventPreview = ({ event }: Props) => (
       {event.images.slice(0, event.previewCount).map((src, i) => (
         <img
           key={i}
-          src={src}
+          src={imagePath(src)}
           alt={`${event.title} ${i + 1}`}
           className={styles.thumbnail}
         />

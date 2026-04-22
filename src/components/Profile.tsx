@@ -1,10 +1,11 @@
 import { profile } from '../config'
+import { imagePath } from '../utils/imagePath'
 import styles from './Profile.module.css'
 
 export const Profile = () => (
   <div className={styles.container}>
     <img
-      src={profile.avatar}
+      src={imagePath(profile.avatar)}
       alt={profile.name}
       className={styles.avatar}
     />

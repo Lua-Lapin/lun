@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { imagePath } from '../utils/imagePath'
 import styles from './Lightbox.module.css'
 
 interface Props {
@@ -27,7 +28,7 @@ export const Lightbox = ({ images, currentIndex, onClose, onPrev, onNext }: Prop
       onClick={onClose}
     >
       <img
-        src={images[currentIndex]}
+        src={imagePath(images[currentIndex])}
         alt={`image ${currentIndex + 1}`}
         className={styles.image}
         onClick={(e) => e.stopPropagation()}
