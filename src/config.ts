@@ -23,28 +23,35 @@ export interface Event {
 }
 
 export const profile: Profile = {
-  name: 'なまえ',
-  bio: 'ひとことじこしょうかい。よろしくね🍊',
-  avatar: '/images/avatar.jpg',
+  name: 'るん',
+  bio: 'のんびり配信してる、るんです！架空事務所 ぱんなこった1期生兼社長やってます！',
+  avatar: '/images/lun.png',
 }
 
 export const snsLinks: SnsLink[] = [
-  { label: 'X (Twitter)', url: 'https://x.com/', icon: 'Twitter' },
-  { label: 'Instagram', url: 'https://instagram.com/', icon: 'Instagram' },
-  { label: 'GitHub', url: 'https://github.com/', icon: 'Github' },
+  { label: 'Reality', url: 'https://reality.app/profile/cce744e4?adj_t=8ogcewh_z9yhix5', icon: 'Diamond' },
+  { label: 'Twitter', url: 'https://x.com/Lun222Lun', icon: 'Twitter' },
+  { label: 'Instagram', url: 'https://www.instagram.com/luncone?igsh=dGNkMW9leTluOGNk&utm_source=qr', icon: 'Instagram' },
 ]
 
 export const events: Event[] = [
   {
-    id: 'sample-event',
-    title: 'サンプルイベント',
-    date: '2024.08',
-    description: 'イベントの説明をここに書く。',
+    id: 'debut-party',
+    title: 'デビューパーティー（画像準備中）',
+    date: '2026.04',
+    description: '',
     images: [
-      '/images/sample-event/01.jpg',
-      '/images/sample-event/02.jpg',
-      '/images/sample-event/03.jpg',
+      // '/images//01.jpg',
     ],
     previewCount: 3,
-  },
+  },{
+    id: 'one-day',
+    title: 'ワンデイ（画像準備中）',
+    date: '2026.03',
+    description: '',
+    images: [
+      // '/images//01.jpg',
+    ],
+    previewCount: 3,
+  }
 ]
