@@ -18,7 +18,7 @@ export const Lightbox = ({ images, currentIndex, onClose, onPrev, onNext }: Prop
     }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
-  }, [onClose, onPrev, onNext])
+  }, [currentIndex, images.length, onClose, onPrev, onNext])
 
   return (
     <div
