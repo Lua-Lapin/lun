@@ -1,5 +1,6 @@
 {
   "name": "lun",
+  "homepage": "https://Lua-Lapin.github.io/lun",
   "private": true,
   "version": "0.0.0",
   "type": "module",
